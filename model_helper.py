@@ -31,8 +31,7 @@ class CarClassifierResNet(nn.Module):
         return x
 
 
-def predict(image_path):
-    image = Image.open(image_path).convert("RGB")
+def predict(image):
     transform = transforms.Compose([
         transforms.Resize((224,224)),
         transforms.ToTensor(),
