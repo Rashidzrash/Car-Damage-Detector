@@ -9,5 +9,5 @@ uploaded_file = st.file_uploader("Upload the file", type=["jpg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
     st.image(uploaded_file, caption="Uploaded File", use_container_width=True)
-    prediction = predict(image_path)
+    prediction = predict(image)
     st.info(f"Predicted Class: {prediction}")
